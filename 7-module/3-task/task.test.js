@@ -163,7 +163,7 @@ describe('7-module-3-task', () => {
     it('должен перемещать ползунок', () => {
       stepSlider.elem.dispatchEvent(clickEvent);
 
-      expect(thumb.style.left).toBe('50%');
+      expect(thumb.style.left).toBe('50%');  
     });
 
     it('должен задавать ширину закрашиваемой области до ползунка', () => {
