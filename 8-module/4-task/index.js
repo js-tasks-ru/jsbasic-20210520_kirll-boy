@@ -150,6 +150,7 @@ export default class Cart {
     this.cartIcon.update(this);
     if (document.querySelector('body').classList.contains('is-modal-open')) {
       for (let card of cartItem) {
+        
         let productId = card.product.id
 
         let productCount = document.querySelector(`[data-product-id="${productId}"] .cart-counter__count`);
