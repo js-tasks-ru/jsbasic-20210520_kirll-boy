@@ -152,12 +152,10 @@ export default class Cart {
       for (let card of cartItem) {
         let productId = card.product.id
 
-        console.log(productId)
         let productCount = document.querySelector(`[data-product-id="${productId}"] .cart-counter__count`);
         let productPrice = document.querySelector(`[data-product-id="${productId}"] .cart-product__price`);
         let infoPrice = document.querySelector(`.cart-buttons__info-price`);
 
-        console.log(card.count, productId)
         productCount.innerHTML = card.count
         infoPrice.innerHTML = `€${this.getTotalPrice().toFixed(2)}`;
         productPrice.innerHTML = `€${(card.count * card.product.price).toFixed(2)}`;
