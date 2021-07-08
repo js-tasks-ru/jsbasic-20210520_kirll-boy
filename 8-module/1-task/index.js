@@ -39,15 +39,16 @@ export default class CartIcon {
   }
 
   updatePosition() {
+    
+    if (!this.elem.offsetWidth) {
+      return;
+    }
     let mobileCart = document.documentElement.clientWidth <= 767;
     let leftIndent = Math.min(
       document.querySelector('.container').getBoundingClientRect().right + 20,
       document.documentElement.clientWidth - this.elem.offsetWidth - 10
     ) + 'px'
 
-    if (!this.elem.offsetWidth) {
-      return;
-    }
     if (!this.initialTopCoord) {
       this.initialTopCoord = this.elem.getBoundingClientRect().top + window.pageYOffset;
     }
